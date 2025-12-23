@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-    <!-- 基础信息 -->
+     <!-- 基础信息 -->
     <meta charset="utf-8">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <!-- 强制 HTTPS，若不需要可删除，但可能出现问题 -->
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
     <!-- 引入样式 -->
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css">
+        href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/mobile.css">
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
@@ -59,6 +59,7 @@
     <script src="./js/51LA.js"></script>
 </head>
 
+
 <body>
     <!--加载动画-->
     <div id="loading-box">
@@ -71,7 +72,7 @@
                 <div class="inner three"></div>
             </div>
             <div class="loading-word">
-                <p class="loading-title" id="loading-title">白画君|Index</p>
+                <p class="loading-title" id="loading-title">白画君|个人主页</p>
                 <span id="loading-text">Loading......</span>
             </div>
         </div>
@@ -79,20 +80,18 @@
     <section id="section" class="section">
         <!-- 背景图片 -->
         <style type="text/css">
-            body {
-                background: url("img/background1.webp") no-repeat center center fixed;
-                /*兼容浏览器版本*/
-                -webkit-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-
-            /*背景图*/
-
+            body{
+              background: url("img/background1.webp") no-repeat center center fixed;
+                          /*兼容浏览器版本*/
+                          -webkit-background-size: cover;
+                          -o-background-size: cover;                
+                          background-size: cover;
+            } /*背景图*/
+       
             .test {
-                margin-top: 100px;
+              margin-top: 100px;
             }
-        </style>
+          </style>
         <!-- 鼠标指针 -->
         <div id="g-pointer-1"></div>
         <div id="g-pointer-2"></div>
@@ -106,45 +105,45 @@
                 <span class="fas fa-search"></span>
             </div>
             <div class="search-data">
-                <input type="text" id="inp" required />
+                <input type="text" id="inp" required/>
                 <div class="line"></div>
-                <label>Type to search...</label>
+                <label>搜索您需要的内容...</label>
                 <span class="fas fa-search" id="btn"></span>
             </div>
 
             <script>
                 var oInp = document.getElementById('inp');
                 var oBtn = document.getElementById('btn');
-
+            
                 oBtn.onclick = function () {
                     Search();
                 }
-
+            
                 document.onkeydown = function () {
                     if (event.keyCode == 13) {
                         Search();
                     }
                 }
-
+            
                 function Search() {
                     var url = 'https://cn.bing.com/search?q=' + oInp.value;
-                    window.open(url, '_self');
+                    window.open(url,'_self');
                 }
             </script>
 
             <script>
-                $(".search-btn").click(function () {
-                    $(this).css("display", "none");
+                $(".search-btn").click(function(){
+                    $(this).css("display","none");
                     $(".search-data").fadeIn(500);
                     $(".close-btn").fadeIn(500);
                     $(".search-data .line").addClass("active");
-                    setTimeout(function () {
+                    setTimeout(function(){
                         $("input").focus();
                         $(".search-data label").fadeIn(500);
                         $(".search-data span").fadeIn(500);
                     }, 800);
                 });
-                $(".close-btn").click(function () {
+                $(".close-btn").click(function(){
                     $(".search-btn").fadeIn(800);
                     $(".search-data").fadeOut(500);
                     $(".close-btn").fadeOut(500);
@@ -164,7 +163,7 @@
                                 <img id="logo-img" src="./img/icon/logo.png" alt="img">
                                 <div class="img-title">
                                     <span class="img-title-big" id="logo-text-1">白画君</span>
-                                    <span class="img-text" id="logo-text-2">.</span>
+                                    <span class="img-text" id="logo-text-2">.io</span>
                                 </div>
                             </div>
                             <!--介绍信息-->
@@ -172,18 +171,18 @@
                                 <div class="des" id="des">
                                     <i class="fa-solid fa-quote-left"></i>
                                     <div class="des-title"><span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
-                                            id="change1">一个存活于互联网边缘的小网站 | BaiHuaJun</span></div>
+                                            id="change1">二次元拯救世界 | BaiHuaJun</span></div>
                                     <i class="fa-solid fa-quote-right"></i>
                                 </div>
                             </div>
                             <!--社交链接-->
                             <div class="social" id="social">
-                                <a href="https://github.com/baihuajun223" class="link" id="github"
-                                    style="margin-left: 4px" target="_blank">
+                                <a href="https://github.com/baihuajun223" class="link" id="github" style="margin-left: 4px"
+                                    target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
-                                <a href="https://res.abeim.cn/api/qq/?qq=258353726" class="link" id="qq"
-                                    target="_blank">
+                                <a href="https://res.abeim.cn/api/qq/?qq=258353726" class="link"
+                                    id="qq" target="_blank">
                                     <i class="fa-brands fa-qq"></i>
                                 </a>
                                 <a href="mailto:chuwang347@gmail.com" class="link" id="email">
@@ -218,7 +217,7 @@
                                         </div>
                                         <!--切换音乐结束-->
                                         <div class="hitokoto-all">
-                                            <div class="hitokoto-text"><span id="hitokoto_text">一个不正经的刷机佬</span>
+                                            <div class="hitokoto-text"><span id="hitokoto_text">一个不正经的无人机佬</span>
                                             </div>
                                             <div class="hitokoto-from">-「&nbsp;<span id="from_text">白画君</span>&nbsp;」
                                             </div>
@@ -298,7 +297,7 @@
                                         <a id="link-url-3" href="https://music.163.com/" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-3" class="fa-solid fa-music"></i>
-                                                <span class="link-name" id="link-name-3">音乐</span>
+                                                <span class="link-name" id="link-name-3">Music</span>
                                             </div>
                                         </a>
                                     </div>
@@ -322,10 +321,10 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a id="link-url-6" href="https://top.baidu.com/" target="_blank">
+                                        <a id="link-url-6" href="https://github.com/baihuajun223" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-6" class="fa-solid fa-flask"></i>
-                                                <span class="link-name" id="link-name-6">今日热榜</span>
+                                                <span class="link-name" id="link-name-6">Mirror-pi</span>
                                             </div>
                                         </a>
                                     </div>
@@ -493,14 +492,14 @@
                                         <button class="accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                             aria-expanded="false" aria-controls="collapseTwo">
-                                            更新日志
+                                        暂无更新
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="headingTwo" data-bs-parent="#accordion">
                                         <div class="accordion-body">
                                             <div class="upnote">
-                                                <span class="uptext">
+						<span class="uptext">
                                                     <i class="fa-solid fa-circle-plus"></i>&nbsp;加快网页相应速度 By.阿坤
                                                 </span>
                                                 <span class="uptext">
@@ -552,10 +551,10 @@
             <div class="power">Copyright&nbsp;©&nbsp;<span id="power-year">2022</span>
                 <script>
                     document.write(' - ' + (new Date()).getFullYear())
-                </script>&nbsp;<a href="http://www.hsbupt.love/" id="power-text">白画君|Hs</a>&nbsp;&amp;&nbsp;
+                </script>&nbsp;<a href="http://www.hsbupt.love/" id="power-text">BaiHuaJun</a>&nbsp;&amp;&nbsp;
                 <!-- 以下信息请不要修改哦 -->
                 Made&nbsp;⚙Modified from&nbsp;<a href="/" target="_blank">imsyy</a>
-                <a href="https://beian.miit.gov.cn/"></a>
+				🔒<a href="https://beian.miit.gov.cn/">暂未备案</a>
             </div>
             <!-- 歌词显示 -->
             <div id="lrc"></div>
@@ -574,12 +573,11 @@
         <div class="noscript fixed-top">请开启 JavaScript</div>
     </noscript>
     <!-- JS -->
-    <script type="text/javascript" src=.\js\main.js></script>
-    <script type="text/javascript" src=".\js\set.js"></script>
-    <script type="text/javascript" src=".\js\time.js"></script>
-    <script type="text/javascript" src=".\js\js.cookie.js"></script>
-    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.min.js">
-    </script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/js.cookie.js"></script>
+    <script type="text/javascript" src="./js/set.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 
 </html>
